@@ -1,6 +1,6 @@
 const mySubmit= document.getElementById("mySubmit");
 const helloH1 = document.getElementById("hello-h1");
-const names = ["friend", "traveler", "adventurer", "visitor"];
+const names = ["explorer", "traveler", "adventurer",];
 const randomName = names[Math.floor(Math.random() * names.length)];
 helloH1.textContent = `Hello, ${randomName}!!`;
 
