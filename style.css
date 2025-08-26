@@ -5,15 +5,23 @@ body {
       overflow: hidden;
       font-family: "Mozilla Text", sans-serif; /* hide scroll while loading */
     }
-    #hello-h1{
-      text-align: center; 
-      font-size: 3rem;     
-    }
+   /* Main Title */
+#hello-h1 {
+  text-align: center;
+  font-size: 2.2rem;    /* smaller than 3rem, but still stands out */
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
 
-    #not-loading{
-      text-align: center;
-      font-size: 15px;
-    }
+/* Subtext */
+#not-loading {
+  text-align: center;
+  font-size: 1rem;      /* ~16px, proportional to title */
+  margin-bottom: 2rem;
+  color: #1f1f1f;       /* slightly darker for readability */
+}
+
     /* Loading screen */
     #loading {
       position: fixed;
@@ -25,7 +33,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: bold;
       opacity: 1;
       transition: opacity 0.8s ease;
@@ -49,4 +57,5 @@ body {
     body.show-elements > *:not(#loading) {
       opacity: 1;
       transform: translateY(0);
+
     }
