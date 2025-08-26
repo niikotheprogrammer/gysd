@@ -1,0 +1,52 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #42FF71;
+      overflow: hidden;
+      font-family: "Mozilla Text", sans-serif; /* hide scroll while loading */
+    }
+    #hello-h1{
+      text-align: center; 
+      font-size: 3rem;     
+    }
+
+    #not-loading{
+      text-align: center;
+      font-size: 15px;
+    }
+    /* Loading screen */
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #42ff71;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      opacity: 1;
+      transition: opacity 0.8s ease;
+      z-index: 1000;
+      letter-spacing: -1px;
+    }
+
+    #loading.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Initial state for all body elements (except loading) */
+    body > *:not(#loading) {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    /* Visible state */
+    body.show-elements > *:not(#loading) {
+      opacity: 1;
+      transform: translateY(0);
+    }
